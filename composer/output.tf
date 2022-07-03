@@ -8,19 +8,39 @@ output "vpc_arn" {
   description = "The AWS vpc arn"
 }
 
-output "subnet_1" {
-  value = aws_subnet.subnet_1.id
-  description = "The AWS subnet public subnet 1 id"
+output "subnet_dmz_01" {
+  value = aws_subnet.subnet_dmz_01.id
+  description = "The AWS subnet dmz 01 id"
 }
 
-output "subnet_2" {
-  value = aws_subnet.subnet_2.id
-  description = "The AWS subnet public subnet 2 id"
+output "subnet_dmz_02" {
+  value = aws_subnet.subnet_dmz_02.id
+  description = "The AWS subnet dmz 02 id"
 }
 
-output "aws_route_table" {
-  value = aws_route_table.rt_1.id
-  description = "The AWS route table id"
+output "subnet_01" {
+  value = aws_subnet.subnet_01.id
+  description = "The AWS subnet subnet 01 id"
+}
+
+output "subnet_02" {
+  value = aws_subnet.subnet_02.id
+  description = "The AWS subnet subnet 02 id"
+}
+
+output "database_subnet_01" {
+  value = aws_subnet.database_subnet_01.id
+  description = "The AWS subnet database subnet 01 id"
+}
+
+output "aws_route_table_01" {
+  value = aws_route_table.route_table_01.id
+  description = "The AWS route table 01 id"
+}
+
+output "aws_route_table_02" {
+  value = aws_route_table.route_table_02.id
+  description = "The AWS route table 02 id"
 }
 
 output "aws_internet_gateway" {

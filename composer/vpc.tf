@@ -4,6 +4,6 @@ resource "aws_vpc" "composer" {
   enable_dns_support = true
 
   tags = {
-    Name = "composer"
+    Name = "composer-application"
   }
 }
