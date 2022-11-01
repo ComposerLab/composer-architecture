@@ -87,3 +87,8 @@ variable "composer_subnet_02" {
   default     = {}
   description = "server subnet"
 }
+
+variable "db_password" {
+  description = "RDS root user password"
+  sensitive   = true
+}
