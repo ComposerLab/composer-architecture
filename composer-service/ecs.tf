@@ -15,8 +15,8 @@ resource "aws_ecs_task_definition" "task_web" {
   ]
   execution_role_arn = aws_iam_role.fargate.arn
   network_mode       = "awsvpc"
-  cpu                = 256
-  memory             = 512
+  cpu                = 4096
+  memory             = 8192
   container_definitions = jsonencode([
     {
       name      = local.web_container.name
@@ -40,8 +40,8 @@ resource "aws_ecs_task_definition" "task_server" {
   ]
   execution_role_arn = aws_iam_role.fargate.arn
   network_mode       = "awsvpc"
-  cpu                = 256
-  memory             = 512
+  cpu                = 4096
+  memory             = 8192
   container_definitions = jsonencode([
     {
       name      = local.server_container.name

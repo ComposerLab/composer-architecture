@@ -20,6 +20,7 @@ resource "aws_lb_target_group" "web_group" {
   protocol    = local.web_lb.target_group["protocol"]
   vpc_id      = data.aws_vpc.vpc.id
   target_type = "ip"
+  deregistration_delay = 60
 
   depends_on = [aws_lb.web_alb]
 
@@ -34,6 +35,7 @@ resource "aws_lb_target_group" "server_group" {
   protocol    = local.server_lb.target_group["protocol"]
   vpc_id      = data.aws_vpc.vpc.id
   target_type = "ip"
+  deregistration_delay = 60
 
   depends_on = [aws_lb.server_alb]
 
